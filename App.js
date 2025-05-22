@@ -47,7 +47,7 @@ else if(currentHour >= 12 && currentHour < 18){
 <Text style={styles.grettings}>
     Bom dia
     { gretting }
-w
+
 </Text>
 
     <TextInput 
