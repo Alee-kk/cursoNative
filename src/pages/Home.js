@@ -5,12 +5,13 @@ import { View,
      TextInput,
       Platform,
       FlatList,
+     
      } from 'react-native';
-import { Button } from './src/components/Button';
-import { SkillCard } from './src/components/SkillCard';
+import { Button } from '../components/Button';
+import { SkillCard } from '../components/SkillCard';
 
 
-export default function App(){
+export default function Home(){
   const [newSkill, setNewSkill] = useState('');
   const [mySkills, setMySkills] = useState([]);
   const [gretting, setGretting] = useState('');
@@ -45,7 +46,7 @@ else if(currentHour >= 12 && currentHour < 18){
       <Text style={styles.title}>Bem vindo Cuzão</Text>
       
 <Text style={styles.grettings}>
-    Bom dia
+    
     { gretting }
 
 </Text>
