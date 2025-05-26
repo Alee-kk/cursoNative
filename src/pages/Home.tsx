@@ -10,15 +10,24 @@ import { View,
 import { Button } from '../components/Button';
 import { SkillCard } from '../components/SkillCard';
 
+interface SkillData {
+  id: string;
+  name: string;
+  date?: Date;
+}
 
 export default function Home(){
   const [newSkill, setNewSkill] = useState('');
-  const [mySkills, setMySkills] = useState([]);
+  const [mySkills, setMySkills] = useState<SkillData[]>([]);
   const [gretting, setGretting] = useState('');
 
 
   function handleAddNewSkill(){
-    setMySkills(oldState => [...oldState, newSkill]);
+    const data = {
+      id: String(new Date().getTime()),
+      name: newSkill
+    }
+    setMySkills(oldState => [...oldState, data]);
   }
   
 
@@ -72,9 +81,9 @@ else if(currentHour >= 12 && currentHour < 18){
 
 <FlatList
   data={mySkills}
-  keyExtractor={item => item}
+  keyExtractor={item => item.id}
   renderItem={({ item })=> (
-    <SkillCard skill={item}/>
+    <SkillCard skill={item.name}/>
   )}
 />
 
