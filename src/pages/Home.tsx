@@ -68,7 +68,9 @@ else if(currentHour >= 12 && currentHour < 18){
     
     />
 
-<Button onPress= {handleAddNewSkill}/>
+<Button onPress= {handleAddNewSkill}
+  title= "Add"
+/>
 
 
 
