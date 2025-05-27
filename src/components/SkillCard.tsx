@@ -1,13 +1,23 @@
 import React from 'react';
 import {
     TouchableOpacity,
+    TouchableOpacityProps,
     Text,
     StyleSheet
 } from 'react-native';
+import { resetCache } from '../../metro.config';
 
-export function SkillCard({ skill }) {
+interface SkillCardProps extends TouchableOpacityProps {
+  skill: string;
+}
+
+export function SkillCard({ skill, ...rest } : SkillCardProps) {
     return (
-         <TouchableOpacity style={styles.buttonskill}>
+         <TouchableOpacity
+          style={styles.buttonskill}
+          {...rest  }
+          >
+
             <Text style={styles.textskill}>
             {skill}
         
