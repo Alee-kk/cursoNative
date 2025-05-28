@@ -56,7 +56,7 @@ else if(currentHour >= 12 && currentHour < 18){
   return (
     <>
     <View style={ styles.container }>
-      <Text style={styles.title}>Bem vindo Cuzão</Text>
+      <Text style={styles.title}>Bem vindo</Text>
       
 <Text style={styles.grettings}>
     
