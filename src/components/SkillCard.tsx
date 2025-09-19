@@ -18,10 +18,10 @@ export function SkillCard({ skill, ...rest } : SkillCardProps) {
           {...rest  }
           >
 
-            <Text style={styles.textskill}>
+            < style={styles.textskill}>
             {skill}
         
-            </Text>
+            </>
         </TouchableOpacity>
     )
 }
